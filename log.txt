@@ -1,0 +1,448 @@
+05-21 07:01:34.331 1425-1897/? I/ActivityManager: START u0 {dat=http://html5demos.com/... cmp=com.google.android.exoplayer.demo/.PlayerActivity (has extras)} from uid 10057 on display 0
+                                                  
+                                                  --------- beginning of main
+05-21 07:01:34.438 3060-3060/? I/ExoPlayerImpl: Init 1.5.8
+05-21 07:01:34.448 3060-3060/? D/EventLogger: start [0]
+05-21 07:01:34.450 3060-3060/? D/EventLogger: state [0.00, false, P]
+05-21 07:01:34.466 3060-3060/? D/EventLogger: state [0.02, true, P]
+05-21 07:01:34.630 3060-3074/? W/EGL_emulation: eglSurfaceAttrib not implemented
+05-21 07:01:34.630 3060-3074/? W/OpenGLRenderer: Failed to set EGL_SWAP_BEHAVIOR on surface 0x9fb3e020, error=EGL_SUCCESS
+05-21 07:01:34.868 1425-1453/? I/ActivityManager: Displayed com.google.android.exoplayer.demo/.PlayerActivity: +507ms
+05-21 07:01:34.945 3060-3074/? E/Surface: getSlotFromBufferLocked: unknown buffer: 0xae3b15b0
+05-21 07:01:34.962 3060-3074/? D/OpenGLRenderer: endAllStagingAnimators on 0xafe7ee80 (ExpandableListView) with handle 0xa14b7820
+05-21 07:01:35.078 1186-1186/? W/SurfaceFlinger: couldn't log to binary event log: overflow.
+05-21 07:01:42.504 3060-3060/? E/EventLogger: internalError [8.06, loadError]
+                                              com.google.android.exoplayer.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://html5demos.com/assets/dizzy.mp4
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:202)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
+                                                  at java.lang.Thread.run(Thread.java:818)
+                                               Caused by: java.net.SocketTimeoutException: timeout
+                                                  at com.android.okhttp.okio.Okio$3.newTimeoutException(Okio.java:207)
+                                                  at com.android.okhttp.okio.AsyncTimeout.exit(AsyncTimeout.java:261)
+                                                  at com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:215)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)
+                                                  at com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)
+                                                  at com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)
+                                                  at com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:904)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:788)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:439)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:384)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:497)
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:199)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)?
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)?
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)?
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)?
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)?
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)?
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)?
+                                                  at java.lang.Thread.run(Thread.java:818)?
+                                               Caused by: java.net.SocketException: Socket closed
+                                                  at libcore.io.Posix.recvfromBytes(Native Method)
+                                                  at libcore.io.Posix.recvfrom(Posix.java:189)
+                                                  at libcore.io.BlockGuardOs.recvfrom(BlockGuardOs.java:250)
+                                                  at libcore.io.IoBridge.recvfrom(IoBridge.java:549)
+                                                  at java.net.PlainSocketImpl.read(PlainSocketImpl.java:481)
+                                                  at java.net.PlainSocketImpl.-wrap0(PlainSocketImpl.java)
+                                                  at java.net.PlainSocketImpl$PlainSocketInputStream.read(PlainSocketImpl.java:237)
+                                                  at com.android.okhttp.okio.Okio$2.read(Okio.java:135)
+                                                  at com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)?
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)?
+                                                  at com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)?
+                                                  at com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)?
+                                                  at com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)?
+                                                  at com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:904)?
+                                                  at com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:788)?
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:439)?
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:384)?
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:497)?
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:199)?
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)?
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)?
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)?
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)?
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)?
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)?
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)?
+                                                  at java.lang.Thread.run(Thread.java:818)?
+05-21 07:01:45.042 3060-4480/? W/NalUnitUtil: Unexpected aspect_ratio_idc value: 254
+05-21 07:01:45.052 3060-3060/? D/EventLogger: state [10.60, true, B]
+05-21 07:01:45.160 3060-4486/? I/OMXClient: Using client-side OMX mux.
+05-21 07:01:45.164 3060-4486/? D/SoftAVCDec: Number of CPU cores: 2
+05-21 07:01:45.169 3060-4485/? I/MediaCodec: [OMX.google.h264.decoder] setting surface generation to 3133446
+05-21 07:01:45.170 3060-4486/? W/OMXNodeInstance: [1:google.h264.decoder] component does not support metadata mode; using fallback
+05-21 07:01:45.170 3060-4486/? E/ACodec: [OMX.google.h264.decoder] storeMetaDataInBuffers failed w/ err -1010
+05-21 07:01:45.170 3060-4486/? D/SoftAVCDec: Number of CPU cores: 2
+05-21 07:01:45.178 3060-3060/? D/EventLogger: decoderInitialized [10.73, OMX.google.h264.decoder]
+05-21 07:01:45.181 3060-4489/? I/OMXClient: Using client-side OMX mux.
+05-21 07:01:45.188 3060-3060/? D/EventLogger: decoderInitialized [10.74, OMX.google.aac.decoder]
+05-21 07:01:45.191 3060-4490/? I/SoftAAC2: limiting to stereo output
+05-21 07:01:50.230 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4006
+05-21 07:01:50.230 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4006, substituting silence
+05-21 07:01:50.231 3060-4490/? I/SoftAAC2: Reconfiguring decoder: 0->44100 Hz, 0->0 channels
+05-21 07:01:50.232 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4007
+05-21 07:01:50.232 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4007, substituting silence
+05-21 07:01:50.233 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4007
+05-21 07:01:50.233 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4007, substituting silence
+05-21 07:01:50.234 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4006
+05-21 07:01:50.234 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4006, substituting silence
+05-21 07:01:50.235 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4002
+05-21 07:01:50.235 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4002, substituting silence
+05-21 07:01:50.237 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4004
+05-21 07:01:50.237 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4004, substituting silence
+05-21 07:01:50.238 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4004
+05-21 07:01:50.238 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4004, substituting silence
+05-21 07:01:50.241 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4004
+05-21 07:01:50.241 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4004, substituting silence
+05-21 07:01:50.245 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4002
+05-21 07:01:50.245 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4002, substituting silence
+05-21 07:01:50.248 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4002
+05-21 07:01:50.248 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4002, substituting silence
+05-21 07:01:50.249 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4007
+05-21 07:01:50.249 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4007, substituting silence
+05-21 07:01:50.251 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4004
+05-21 07:01:50.251 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4004, substituting silence
+05-21 07:01:50.254 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4004
+05-21 07:01:50.254 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4004, substituting silence
+05-21 07:01:50.255 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4004
+05-21 07:01:50.255 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4004, substituting silence
+05-21 07:01:50.256 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4004
+05-21 07:01:50.256 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4004, substituting silence
+05-21 07:01:50.257 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4006
+05-21 07:01:50.257 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4006, substituting silence
+05-21 07:01:50.258 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4004
+05-21 07:01:50.258 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4004, substituting silence
+05-21 07:01:50.258 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4002
+05-21 07:01:50.258 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4002, substituting silence
+05-21 07:01:50.259 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4007
+05-21 07:01:50.259 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4007, substituting silence
+05-21 07:01:50.259 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4007
+05-21 07:01:50.259 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4007, substituting silence
+05-21 07:01:50.263 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4002
+05-21 07:01:50.263 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4002, substituting silence
+05-21 07:01:50.263 3060-4490/? W/SoftAAC2: aacDecoder_DecodeFrame decoderErr = 0x4004
+05-21 07:01:50.263 3060-4490/? W/SoftAAC2: AAC decoder returned error 0x4004, substituting silence
+05-21 07:02:08.365 3060-3060/? E/EventLogger: internalError [33.92, loadError]
+                                              com.google.android.exoplayer.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://html5demos.com/assets/dizzy.mp4
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:202)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
+                                                  at java.lang.Thread.run(Thread.java:818)
+                                               Caused by: java.net.SocketTimeoutException
+                                                  at java.net.PlainSocketImpl.read(PlainSocketImpl.java:484)
+                                                  at java.net.PlainSocketImpl.-wrap0(PlainSocketImpl.java)
+                                                  at java.net.PlainSocketImpl$PlainSocketInputStream.read(PlainSocketImpl.java:237)
+                                                  at com.android.okhttp.okio.Okio$2.read(Okio.java:135)
+                                                  at com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)
+                                                  at com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)
+                                                  at com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)
+                                                  at com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:904)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:788)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:439)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:384)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:497)
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:199)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)?
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)?
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)?
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)?
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)?
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)?
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)?
+                                                  at java.lang.Thread.run(Thread.java:818)?
+05-21 07:02:12.747 1425-1879/? D/ConnectivityService: reportNetworkConnectivity(100, false) by 10007
+05-21 07:02:12.747 1425-2353/? D/NetworkMonitor/NetworkAgentInfo?[MOBILE?(UMTS)?-?100]: Forcing reevaluation for UID 10007
+05-21 07:02:12.774 1425-2353/? D/NetworkMonitor/NetworkAgentInfo?[MOBILE?(UMTS)?-?100]: Checking http://connectivitycheck.gstatic.com/generate_204 on epc.tmobile.com, connectivitycheck.gstatic.com=216.58.221.238
+05-21 07:02:13.196 1425-2353/? D/NetworkMonitor/NetworkAgentInfo?[MOBILE?(UMTS)?-?100]: isCaptivePortal: ret=204 headers={null=[HTTP/1.1 204 OK], Content-Length=[0], Date=[Sat, 21 May 2016 07:02:13 GMT], X-Android-Received-Millis=[1463814133196], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1463814132775]}
+05-21 07:02:13.197 1425-1574/? D/ConnectivityService: setProvNotificationVisibleIntent null visible=false networkType=MOBILE extraInfo=null highPriority=false
+05-21 07:02:13.197 1425-1574/? D/ConnectivityService: NetworkAgentInfo [MOBILE (UMTS) - 100] validation  passed
+05-21 07:02:16.366 3060-3060/? E/EventLogger: internalError [41.92, loadError]
+                                              com.google.android.exoplayer.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://html5demos.com/assets/dizzy.mp4
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:202)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
+                                                  at java.lang.Thread.run(Thread.java:818)
+                                               Caused by: java.net.SocketTimeoutException
+                                                  at java.net.PlainSocketImpl.read(PlainSocketImpl.java:484)
+                                                  at java.net.PlainSocketImpl.-wrap0(PlainSocketImpl.java)
+                                                  at java.net.PlainSocketImpl$PlainSocketInputStream.read(PlainSocketImpl.java:237)
+                                                  at com.android.okhttp.okio.Okio$2.read(Okio.java:135)
+                                                  at com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)
+                                                  at com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)
+                                                  at com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)
+                                                  at com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:904)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:788)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:439)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:384)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:497)
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:199)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)?
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)?
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)?
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)?
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)?
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)?
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)?
+                                                  at java.lang.Thread.run(Thread.java:818)?
+05-21 07:02:43.255 3060-3060/? E/EventLogger: internalError [68.81, loadError]
+                                              com.google.android.exoplayer.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://html5demos.com/assets/dizzy.mp4
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:202)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
+                                                  at java.lang.Thread.run(Thread.java:818)
+                                               Caused by: java.net.SocketTimeoutException
+                                                  at java.net.PlainSocketImpl.read(PlainSocketImpl.java:484)
+                                                  at java.net.PlainSocketImpl.-wrap0(PlainSocketImpl.java)
+                                                  at java.net.PlainSocketImpl$PlainSocketInputStream.read(PlainSocketImpl.java:237)
+                                                  at com.android.okhttp.okio.Okio$2.read(Okio.java:135)
+                                                  at com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)
+                                                  at com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)
+                                                  at com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)
+                                                  at com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:904)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:788)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:439)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:384)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:497)
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:199)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)?
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)?
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)?
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)?
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)?
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)?
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)?
+                                                  at java.lang.Thread.run(Thread.java:818)?
+05-21 07:02:51.265 3060-3060/? E/EventLogger: internalError [76.82, loadError]
+                                              com.google.android.exoplayer.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://html5demos.com/assets/dizzy.mp4
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:202)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
+                                                  at java.lang.Thread.run(Thread.java:818)
+                                               Caused by: java.net.SocketTimeoutException
+                                                  at java.net.PlainSocketImpl.read(PlainSocketImpl.java:484)
+                                                  at java.net.PlainSocketImpl.-wrap0(PlainSocketImpl.java)
+                                                  at java.net.PlainSocketImpl$PlainSocketInputStream.read(PlainSocketImpl.java:237)
+                                                  at com.android.okhttp.okio.Okio$2.read(Okio.java:135)
+                                                  at com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)
+                                                  at com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)
+                                                  at com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)
+                                                  at com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:904)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:788)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:439)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:384)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:497)
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:199)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)?
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)?
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)?
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)?
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)?
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)?
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)?
+                                                  at java.lang.Thread.run(Thread.java:818)?
+05-21 07:03:00.264 3060-3060/? E/EventLogger: internalError [85.82, loadError]
+                                              com.google.android.exoplayer.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://html5demos.com/assets/dizzy.mp4
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:202)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
+                                                  at java.lang.Thread.run(Thread.java:818)
+                                               Caused by: java.net.SocketTimeoutException
+                                                  at java.net.PlainSocketImpl.read(PlainSocketImpl.java:484)
+                                                  at java.net.PlainSocketImpl.-wrap0(PlainSocketImpl.java)
+                                                  at java.net.PlainSocketImpl$PlainSocketInputStream.read(PlainSocketImpl.java:237)
+                                                  at com.android.okhttp.okio.Okio$2.read(Okio.java:135)
+                                                  at com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)
+                                                  at com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)
+                                                  at com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)
+                                                  at com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:904)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:788)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:439)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:384)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:497)
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:199)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)?
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)?
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)?
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)?
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)?
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)?
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)?
+                                                  at java.lang.Thread.run(Thread.java:818)?
+05-21 07:03:10.266 3060-3060/? E/EventLogger: internalError [95.82, loadError]
+                                              com.google.android.exoplayer.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://html5demos.com/assets/dizzy.mp4
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:202)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
+                                                  at java.lang.Thread.run(Thread.java:818)
+                                               Caused by: java.net.SocketTimeoutException
+                                                  at java.net.PlainSocketImpl.read(PlainSocketImpl.java:484)
+                                                  at java.net.PlainSocketImpl.-wrap0(PlainSocketImpl.java)
+                                                  at java.net.PlainSocketImpl$PlainSocketInputStream.read(PlainSocketImpl.java:237)
+                                                  at com.android.okhttp.okio.Okio$2.read(Okio.java:135)
+                                                  at com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)
+                                                  at com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)
+                                                  at com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)
+                                                  at com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:904)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:788)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:439)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:384)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:497)
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:199)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)?
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)?
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)?
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)?
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)?
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)?
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)?
+                                                  at java.lang.Thread.run(Thread.java:818)?
+05-21 07:03:10.269 3060-4479/? E/ExoPlayerImplInternal: Internal track renderer error.
+                                                        com.google.android.exoplayer.ExoPlaybackException: com.google.android.exoplayer.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://html5demos.com/assets/dizzy.mp4
+                                                            at com.google.android.exoplayer.SampleSourceTrackRenderer.maybeThrowError(SampleSourceTrackRenderer.java:263)
+                                                            at com.google.android.exoplayer.SampleSourceTrackRenderer.maybeThrowError(SampleSourceTrackRenderer.java:145)
+                                                            at com.google.android.exoplayer.ExoPlayerImplInternal.doSomeWork(ExoPlayerImplInternal.java:441)
+                                                            at com.google.android.exoplayer.ExoPlayerImplInternal.handleMessage(ExoPlayerImplInternal.java:213)
+                                                            at android.os.Handler.dispatchMessage(Handler.java:98)
+                                                            at android.os.Looper.loop(Looper.java:148)
+                                                            at android.os.HandlerThread.run(HandlerThread.java:61)
+                                                            at com.google.android.exoplayer.util.PriorityHandlerThread.run(PriorityHandlerThread.java:40)
+                                                         Caused by: com.google.android.exoplayer.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://html5demos.com/assets/dizzy.mp4
+                                                            at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:202)
+                                                            at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)
+                                                            at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)
+                                                            at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)
+                                                            at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+                                                            at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+                                                            at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
+                                                            at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
+                                                            at java.lang.Thread.run(Thread.java:818)
+                                                         Caused by: java.net.SocketTimeoutException
+                                                            at java.net.PlainSocketImpl.read(PlainSocketImpl.java:484)
+                                                            at java.net.PlainSocketImpl.-wrap0(PlainSocketImpl.java)
+                                                            at java.net.PlainSocketImpl$PlainSocketInputStream.read(PlainSocketImpl.java:237)
+                                                            at com.android.okhttp.okio.Okio$2.read(Okio.java:135)
+                                                            at com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)
+                                                            at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)
+                                                            at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)
+                                                            at com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)
+                                                            at com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)
+                                                            at com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)
+                                                            at com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:904)
+                                                            at com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:788)
+                                                            at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:439)
+                                                            at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:384)
+                                                            at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:497)
+                                                            at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:199)
+                                                            at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)?
+                                                            at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)?
+                                                            at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)?
+                                                            at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)?
+                                                            at java.util.concurrent.FutureTask.run(FutureTask.java:237)?
+                                                            at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)?
+                                                            at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)?
+                                                            at java.lang.Thread.run(Thread.java:818)?
+05-21 07:03:10.273 3060-3060/? E/EventLogger: playerFailed [95.82]
+                                              com.google.android.exoplayer.ExoPlaybackException: com.google.android.exoplayer.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://html5demos.com/assets/dizzy.mp4
+                                                  at com.google.android.exoplayer.SampleSourceTrackRenderer.maybeThrowError(SampleSourceTrackRenderer.java:263)
+                                                  at com.google.android.exoplayer.SampleSourceTrackRenderer.maybeThrowError(SampleSourceTrackRenderer.java:145)
+                                                  at com.google.android.exoplayer.ExoPlayerImplInternal.doSomeWork(ExoPlayerImplInternal.java:441)
+                                                  at com.google.android.exoplayer.ExoPlayerImplInternal.handleMessage(ExoPlayerImplInternal.java:213)
+                                                  at android.os.Handler.dispatchMessage(Handler.java:98)
+                                                  at android.os.Looper.loop(Looper.java:148)
+                                                  at android.os.HandlerThread.run(HandlerThread.java:61)
+                                                  at com.google.android.exoplayer.util.PriorityHandlerThread.run(PriorityHandlerThread.java:40)
+                                               Caused by: com.google.android.exoplayer.upstream.HttpDataSource$HttpDataSourceException: Unable to connect to http://html5demos.com/assets/dizzy.mp4
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:202)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
+                                                  at java.lang.Thread.run(Thread.java:818)
+                                               Caused by: java.net.SocketTimeoutException
+                                                  at java.net.PlainSocketImpl.read(PlainSocketImpl.java:484)
+                                                  at java.net.PlainSocketImpl.-wrap0(PlainSocketImpl.java)
+                                                  at java.net.PlainSocketImpl$PlainSocketInputStream.read(PlainSocketImpl.java:237)
+                                                  at com.android.okhttp.okio.Okio$2.read(Okio.java:135)
+                                                  at com.android.okhttp.okio.AsyncTimeout$2.read(AsyncTimeout.java:211)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:306)
+                                                  at com.android.okhttp.okio.RealBufferedSource.indexOf(RealBufferedSource.java:300)
+                                                  at com.android.okhttp.okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:196)
+                                                  at com.android.okhttp.internal.http.HttpConnection.readResponse(HttpConnection.java:191)
+                                                  at com.android.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport.java:80)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readNetworkResponse(HttpEngine.java:904)
+                                                  at com.android.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:788)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:439)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:384)
+                                                  at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:497)
+                                                  at com.google.android.exoplayer.upstream.DefaultHttpDataSource.open(DefaultHttpDataSource.java:199)
+                                                  at com.google.android.exoplayer.upstream.DefaultUriDataSource.open(DefaultUriDataSource.java:135)?
+                                                  at com.google.android.exoplayer.extractor.ExtractorSampleSource$ExtractingLoadable.load(ExtractorSampleSource.java:824)?
+                                                  at com.google.android.exoplayer.upstream.Loader$LoadTask.run(Loader.java:209)?
+                                                  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)?
+                                                  at java.util.concurrent.FutureTask.run(FutureTask.java:237)?
+                                                  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)?
+                                                  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)?
+                                                  at java.lang.Thread.run(Thread.java:818)?
+05-21 07:03:10.306 3060-3074/? W/EGL_emulation: eglSurfaceAttrib not implemented
+05-21 07:03:10.306 3060-3074/? W/OpenGLRenderer: Failed to set EGL_SWAP_BEHAVIOR on surface 0xa1a7f140, error=EGL_SUCCESS
+05-21 07:03:10.327 3060-3060/? D/EventLogger: state [95.88, true, I]
